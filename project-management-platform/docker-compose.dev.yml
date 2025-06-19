@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  postgres:
+    environment:
+      POSTGRES_DB: project_management_dev
+      POSTGRES_USER: pm_dev_user
+      POSTGRES_PASSWORD: pm_dev_password
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+  backend:
+    environment:
+      - APP_ENV=development
+      - DB_HOST=postgres
+      - DB_USER=pm_dev_user
+      - DB_PASSWORD=pm_dev_password
+      - DB_NAME=project_management_dev
+      - LOG_LEVEL=debug
+    volumes:
+      - ./backend:/app
+      - /app/vendor
+    command: ["go", "run", "cmd/main.go"]
+
+  frontend:
+    environment:
+      - NODE_ENV=development
+    command: ["npm", "run", "start"]
+
+volumes:
+  postgres_dev_data:
