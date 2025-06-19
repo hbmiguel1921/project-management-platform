@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"net/http"
-	"strconv"
 	"time"
 
 	"github.com/company/project-management-platform/internal/models"
@@ -69,7 +68,7 @@ func (h *TimeTrackingHandler) StopTimeEntry(c *gin.Context) {
 
 func (h *TimeTrackingHandler) GetTimeEntries(c *gin.Context) {
 	userID, _ := uuid.Parse(c.GetString("user_id"))
-	
+
 	var projectID *uuid.UUID
 	if projectIDStr := c.Query("project_id"); projectIDStr != "" {
 		if id, err := uuid.Parse(projectIDStr); err == nil {
@@ -173,7 +172,7 @@ func (h *TimeTrackingHandler) GetActiveTimeEntry(c *gin.Context) {
 
 func (h *TimeTrackingHandler) GetTimeReports(c *gin.Context) {
 	userID, _ := uuid.Parse(c.GetString("user_id"))
-	
+
 	var projectID *uuid.UUID
 	if projectIDStr := c.Query("project_id"); projectIDStr != "" {
 		if id, err := uuid.Parse(projectIDStr); err == nil {

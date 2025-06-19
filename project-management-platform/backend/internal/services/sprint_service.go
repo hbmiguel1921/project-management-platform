@@ -10,7 +10,7 @@ import (
 )
 
 type SprintService struct {
-	db *gorm.DB
+	db                  *gorm.DB
 	notificationService *NotificationService
 }
 
@@ -47,7 +47,7 @@ func (s *SprintService) CreateSprint(projectID, userID uuid.UUID, req *models.Cr
 
 func (s *SprintService) GetSprints(projectID, userID uuid.UUID, status *models.SprintStatus) ([]models.Sprint, error) {
 	var sprints []models.Sprint
-	
+
 	query := s.db.Where("project_id = ?", projectID).
 		Preload("Project").
 		Preload("Events").
@@ -66,7 +66,7 @@ func (s *SprintService) GetSprints(projectID, userID uuid.UUID, status *models.S
 
 func (s *SprintService) GetSprint(sprintID, userID uuid.UUID) (*models.Sprint, error) {
 	var sprint models.Sprint
-	
+
 	if err := s.db.Preload("Project").
 		Preload("Tasks").
 		Preload("Events").
@@ -80,7 +80,7 @@ func (s *SprintService) GetSprint(sprintID, userID uuid.UUID) (*models.Sprint, e
 
 func (s *SprintService) UpdateSprint(sprintID, userID uuid.UUID, req *models.UpdateSprintRequest) (*models.Sprint, error) {
 	var sprint models.Sprint
-	
+
 	if err := s.db.First(&sprint, sprintID).Error; err != nil {
 		return nil, fmt.Errorf("error obteniendo sprint: %w", err)
 	}
@@ -119,7 +119,7 @@ func (s *SprintService) UpdateSprint(sprintID, userID uuid.UUID, req *models.Upd
 
 func (s *SprintService) StartSprint(sprintID, userID uuid.UUID) (*models.Sprint, error) {
 	var sprint models.Sprint
-	
+
 	if err := s.db.First(&sprint, sprintID).Error; err != nil {
 		return nil, fmt.Errorf("error obteniendo sprint: %w", err)
 	}
@@ -152,7 +152,7 @@ func (s *SprintService) StartSprint(sprintID, userID uuid.UUID) (*models.Sprint,
 
 func (s *SprintService) CompleteSprint(sprintID, userID uuid.UUID) (*models.Sprint, error) {
 	var sprint models.Sprint
-	
+
 	if err := s.db.Preload("Tasks").First(&sprint, sprintID).Error; err != nil {
 		return nil, fmt.Errorf("error obteniendo sprint: %w", err)
 	}
@@ -240,7 +240,7 @@ func (s *SprintService) CreateSprintEvent(sprintID, userID uuid.UUID, eventType 
 
 func (s *SprintService) GetSprintEvents(sprintID uuid.UUID) ([]models.SprintEvent, error) {
 	var events []models.SprintEvent
-	
+
 	if err := s.db.Where("sprint_id = ?", sprintID).
 		Preload("User").
 		Order("date DESC").
@@ -260,10 +260,10 @@ func (s *SprintService) CalculateSprintMetrics(sprint *models.Sprint) {
 	completedPoints := 0
 
 	for _, task := range tasks {
-		if task.StoryPoints > 0 {
-			committedPoints += task.StoryPoints
-			if task.Status == models.TaskStatusCompleted {
-				completedPoints += task.StoryPoints
+		if task.StoryPoints != nil && *task.StoryPoints > 0 {
+			committedPoints += *task.StoryPoints
+			if task.Status == models.TaskStatusDone {
+				completedPoints += *task.StoryPoints
 			}
 		}
 	}
@@ -281,14 +281,14 @@ func (s *SprintService) GetSprintBurndownData(sprintID uuid.UUID) (map[string]in
 
 	// Calcular datos de burndown por día
 	burndownData := make(map[string]interface{})
-	
+
 	// TODO: Implementar cálculo detallado de burndown chart
 	burndownData["sprint_id"] = sprintID
 	burndownData["total_points"] = sprint.CommittedPoints
 	burndownData["completed_points"] = sprint.CompletedPoints
 	burndownData["remaining_points"] = sprint.CommittedPoints - sprint.CompletedPoints
 	burndownData["days_remaining"] = sprint.GetDaysRemaining()
-	
+
 	return burndownData, nil
 }
 
