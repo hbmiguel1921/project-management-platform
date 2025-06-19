@@ -5,16 +5,17 @@ import (
 	"time"
 
 	"github.com/company/project-management-platform/internal/models"
+	internalws "github.com/company/project-management-platform/internal/websocket"
 	"github.com/google/uuid"
 	"gorm.io/gorm"
 )
 
 type NotificationService struct {
-	db *gorm.DB
-	wsHub *websocket.Hub // Para notificaciones en tiempo real
+	db    *gorm.DB
+	wsHub *internalws.Hub // Para notificaciones en tiempo real
 }
 
-func NewNotificationService(db *gorm.DB, wsHub *websocket.Hub) *NotificationService {
+func NewNotificationService(db *gorm.DB, wsHub *internalws.Hub) *NotificationService {
 	return &NotificationService{
 		db:    db,
 		wsHub: wsHub,
@@ -84,8 +85,8 @@ func (s *NotificationService) MarkAsRead(notificationID, userID uuid.UUID) error
 	result := s.db.Model(&models.Notification{}).
 		Where("id = ? AND user_id = ?", notificationID, userID).
 		Updates(map[string]interface{}{
-			"is_read":  true,
-			"read_at":  time.Now(),
+			"is_read": true,
+			"read_at": time.Now(),
 		})
 
 	if result.Error != nil {
@@ -103,8 +104,8 @@ func (s *NotificationService) MarkAllAsRead(userID uuid.UUID) error {
 	return s.db.Model(&models.Notification{}).
 		Where("user_id = ? AND is_read = ?", userID, false).
 		Updates(map[string]interface{}{
-			"is_read":  true,
-			"read_at":  time.Now(),
+			"is_read": true,
+			"read_at": time.Now(),
 		}).Error
 }
 
@@ -170,7 +171,7 @@ func (s *NotificationService) NotifyCommentAdded(taskID, commentID, commenterID 
 	}
 
 	// TODO: Notificar a seguidores de la tarea (implementar sistema de seguimiento)
-	
+
 	return nil
 }
 
@@ -193,10 +194,10 @@ func (s *NotificationService) NotifyProjectInvite(projectID, invitedUserID, invi
 func (s *NotificationService) sendRealTimeNotification(notification *models.Notification) {
 	if s.wsHub != nil {
 		// Enviar notificación via WebSocket
-		s.wsHub.BroadcastToUser(notification.UserID.String(), &websocket.Message{
-			Type:   "notification",
-			UserID: notification.UserID.String(),
-			Data:   notification,
+		s.wsHub.BroadcastToUser(notification.UserID.String(), &internalws.Message{
+			Type:      "notification",
+			UserID:    notification.UserID.String(),
+			Data:      notification,
 			Timestamp: time.Now().Unix(),
 		})
 	}
@@ -206,6 +207,5 @@ func (s *NotificationService) sendEmailNotification(notification *models.Notific
 	// TODO: Implementar envío de emails
 	// Verificar preferencias del usuario
 	// Usar servicio de email configurado
-	fmt.Printf("Sending email notification to user %s: %s
-", notification.UserID, notification.Title)
+	fmt.Printf("Sending email notification to user %s: %s", notification.UserID, notification.Title)
 }

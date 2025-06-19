@@ -54,7 +54,7 @@ func (h *AuthHandler) RefreshToken(c *gin.Context) {
 	var req struct {
 		RefreshToken string `json:"refresh_token" binding:"required"`
 	}
-	
+
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
@@ -71,7 +71,7 @@ func (h *AuthHandler) RefreshToken(c *gin.Context) {
 
 func (h *AuthHandler) GetProfile(c *gin.Context) {
 	userID := c.GetString("user_id")
-	
+
 	user, err := h.authService.GetUserByID(userID)
 	if err != nil {
 		c.JSON(http.StatusNotFound, gin.H{"error": "Usuario no encontrado"})
@@ -82,8 +82,7 @@ func (h *AuthHandler) GetProfile(c *gin.Context) {
 }
 
 func (h *AuthHandler) UpdateProfile(c *gin.Context) {
-	userID := c.GetString("user_id")
-	
+
 	var req models.UpdateUserRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
@@ -96,7 +95,7 @@ func (h *AuthHandler) UpdateProfile(c *gin.Context) {
 
 func (h *AuthHandler) ChangePassword(c *gin.Context) {
 	userID := c.GetString("user_id")
-	
+
 	var req models.ChangePasswordRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})

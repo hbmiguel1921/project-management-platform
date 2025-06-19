@@ -1,0 +1,1158 @@
+diff --git a/project-management-platform/backend/go.sum b/project-management-platform/backend/go.sum
+new file mode 100644
+index 0000000000000000000000000000000000000000..9f304f58cddcaf75e0dc036379986a91b9561dcf
+--- /dev/null
++++ b/project-management-platform/backend/go.sum
+@@ -0,0 +1,122 @@
++github.com/bytedance/sonic v1.13.2 h1:8/H1FempDZqC4VqjptGo14QQlJx8VdZJegxs6wwfqpQ=
++github.com/bytedance/sonic v1.13.2/go.mod h1:o68xyaF9u2gvVBuGHPlUVCy+ZfmNNO5ETf1+KgkJhz4=
++github.com/bytedance/sonic/loader v0.1.1/go.mod h1:ncP89zfokxS5LZrJxl5z0UJcsk4M4yY2JpfqGeCtNLU=
++github.com/bytedance/sonic/loader v0.2.4 h1:ZWCw4stuXUsn1/+zQDqeE7JKP+QO47tz7QCNan80NzY=
++github.com/bytedance/sonic/loader v0.2.4/go.mod h1:N8A3vUdtUebEY2/VQC0MyhYeKUFosQU6FxH2JmUe6VI=
++github.com/cloudwego/base64x v0.1.5 h1:XPciSp1xaq2VCSt6lF0phncD4koWyULpl5bUxbfCyP4=
++github.com/cloudwego/base64x v0.1.5/go.mod h1:0zlkT4Wn5C6NdauXdJRhSKRlJvmclQ1hhJgA0rcu/8w=
++github.com/cloudwego/iasm v0.2.0/go.mod h1:8rXZaNYT2n95jn+zTI1sDr+IgcD2GVs0nlbbQPiEFhY=
++github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
++github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
++github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
++github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
++github.com/gabriel-vasile/mimetype v1.4.8 h1:FfZ3gj38NjllZIeJAmMhr+qKL8Wu+nOoI3GqacKw1NM=
++github.com/gabriel-vasile/mimetype v1.4.8/go.mod h1:ByKUIKGjh1ODkGM1asKUbQZOLGrPjydw3hYPU2YU9t8=
++github.com/gin-contrib/cors v1.7.5 h1:cXC9SmofOrRg0w9PigwGlHG3ztswH6bqq4vJVXnvYMk=
++github.com/gin-contrib/cors v1.7.5/go.mod h1:4q3yi7xBEDDWKapjT2o1V7mScKDDr8k+jZ0fSquGoy0=
++github.com/gin-contrib/sse v1.0.0 h1:y3bT1mUWUxDpW4JLQg/HnTqV4rozuW4tC9eFKTxYI9E=
++github.com/gin-contrib/sse v1.0.0/go.mod h1:zNuFdwarAygJBht0NTKiSi3jRf6RbqeILZ9Sp6Slhe0=
++github.com/gin-gonic/gin v1.10.0 h1:nTuyha1TYqgedzytsKYqna+DfLos46nTv2ygFy86HFU=
++github.com/gin-gonic/gin v1.10.0/go.mod h1:4PMNQiOhvDRa013RKVbsiNwoyezlm2rm0uX/T7kzp5Y=
++github.com/go-playground/assert/v2 v2.2.0 h1:JvknZsQTYeFEAhQwI4qEt9cyV5ONwRHC+lYKSsYSR8s=
++github.com/go-playground/assert/v2 v2.2.0/go.mod h1:VDjEfimB/XKnb+ZQfWdccd7VUvScMdVu0Titje2rxJ4=
++github.com/go-playground/locales v0.14.1 h1:EWaQ/wswjilfKLTECiXz7Rh+3BjFhfDFKv/oXslEjJA=
++github.com/go-playground/locales v0.14.1/go.mod h1:hxrqLVvrK65+Rwrd5Fc6F2O76J/NuW9t0sjnWqG1slY=
++github.com/go-playground/universal-translator v0.18.1 h1:Bcnm0ZwsGyWbCzImXv+pAJnYK9S473LQFuzCbDbfSFY=
++github.com/go-playground/universal-translator v0.18.1/go.mod h1:xekY+UJKNuX9WP91TpwSH2VMlDf28Uj24BCp08ZFTUY=
++github.com/go-playground/validator/v10 v10.26.0 h1:SP05Nqhjcvz81uJaRfEV0YBSSSGMc/iMaVtFbr3Sw2k=
++github.com/go-playground/validator/v10 v10.26.0/go.mod h1:I5QpIEbmr8On7W0TktmJAumgzX4CA1XNl4ZmDuVHKKo=
++github.com/goccy/go-json v0.10.5 h1:Fq85nIqj+gXn/S5ahsiTlK3TmC85qgirsdTP/+DeaC4=
++github.com/goccy/go-json v0.10.5/go.mod h1:oq7eo15ShAhp70Anwd5lgX2pLfOS3QCiwU/PULtXL6M=
++github.com/golang-jwt/jwt/v4 v4.5.2 h1:YtQM7lnr8iZ+j5q71MGKkNw9Mn7AjHM68uc9g5fXeUI=
++github.com/golang-jwt/jwt/v4 v4.5.2/go.mod h1:m21LjoU+eqJr34lmDMbreY2eSTRJ1cv77w39/MY0Ch0=
++github.com/google/go-cmp v0.5.5 h1:Khx7svrCpmxxtHBq5j2mp/xVjsi8hQMfNLvJFAlrGgU=
++github.com/google/go-cmp v0.5.5/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
++github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=
++github.com/google/uuid v1.4.0 h1:MtMxsa51/r9yyhkyLsVeVt0B+BGQZzpQiTQ4eHZ8bc4=
++github.com/google/uuid v1.4.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
++github.com/gorilla/websocket v1.5.1 h1:gmztn0JnHVt9JZquRuzLw3g4wouNVzKL15iLr/zn/QY=
++github.com/gorilla/websocket v1.5.1/go.mod h1:x3kM2JMyaluk02fnUJpQuwD2dCS5NDG2ZHL0uE0tcaY=
++github.com/jackc/pgpassfile v1.0.0 h1:/6Hmqy13Ss2zCq62VdNG8tM1wchn8zjSGOBJ6icpsIM=
++github.com/jackc/pgpassfile v1.0.0/go.mod h1:CEx0iS5ambNFdcRtxPj5JhEz+xB6uRky5eyVu/W2HEg=
++github.com/jackc/pgservicefile v0.0.0-20221227161230-091c0ba34f0a h1:bbPeKD0xmW/Y25WS6cokEszi5g+S0QxI/d45PkRi7Nk=
++github.com/jackc/pgservicefile v0.0.0-20221227161230-091c0ba34f0a/go.mod h1:5TJZWKEWniPve33vlWYSoGYefn3gLQRzjfDlhSJ9ZKM=
++github.com/jackc/pgx/v5 v5.4.3 h1:cxFyXhxlvAifxnkKKdlxv8XqUf59tDlYjnV5YYfsJJY=
++github.com/jackc/pgx/v5 v5.4.3/go.mod h1:Ig06C2Vu0t5qXC60W8sqIthScaEnFvojjj9dSljmHRA=
++github.com/jinzhu/inflection v1.0.0 h1:K317FqzuhWc8YvSVlFMCCUb36O/S9MCKRDI7QkRKD/E=
++github.com/jinzhu/inflection v1.0.0/go.mod h1:h+uFLlag+Qp1Va5pdKtLDYj+kHp5pxUVkryuEj+Srlc=
++github.com/jinzhu/now v1.1.5 h1:/o9tlHleP7gOFmsnYNz3RGnqzefHA47wQpKrrdTIwXQ=
++github.com/jinzhu/now v1.1.5/go.mod h1:d3SSVoowX0Lcu0IBviAWJpolVfI5UJVZZ7cO71lE/z8=
++github.com/joho/godotenv v1.4.0 h1:3l4+N6zfMWnkbPEXKng2o2/MR5mSwTrBih4ZEkkz1lg=
++github.com/joho/godotenv v1.4.0/go.mod h1:f4LDr5Voq0i2e/R5DDNOoa2zzDfwtkZa6DnEwAbqwq4=
++github.com/json-iterator/go v1.1.12 h1:PV8peI4a0ysnczrg+LtxykD8LfKY9ML6u2jnxaEnrnM=
++github.com/json-iterator/go v1.1.12/go.mod h1:e30LSqwooZae/UwlEbR2852Gd8hjQvJoHmT4TnhNGBo=
++github.com/klauspost/cpuid/v2 v2.0.9/go.mod h1:FInQzS24/EEf25PyTYn52gqo7WaD8xa0213Md/qVLRg=
++github.com/klauspost/cpuid/v2 v2.2.10 h1:tBs3QSyvjDyFTq3uoc/9xFpCuOsJQFNPiAhYdw2skhE=
++github.com/klauspost/cpuid/v2 v2.2.10/go.mod h1:hqwkgyIinND0mEev00jJYCxPNVRVXFQeu1XKlok6oO0=
++github.com/knz/go-libedit v1.10.1/go.mod h1:MZTVkCWyz0oBc7JOWP3wNAzd002ZbM/5hgShxwh4x8M=
++github.com/kr/pretty v0.3.0 h1:WgNl7dwNpEZ6jJ9k1snq4pZsg7DOEN8hP9Xw0Tsjwk0=
++github.com/kr/pretty v0.3.0/go.mod h1:640gp4NfQd8pI5XOwp5fnNeVWj67G7CFk/SaSQn7NBk=
++github.com/kr/text v0.2.0 h1:5Nx0Ya0ZqY2ygV366QzturHI13Jq95ApcVaJBhpS+AY=
++github.com/kr/text v0.2.0/go.mod h1:eLer722TekiGuMkidMxC/pM04lWEeraHUUmBw8l2grE=
++github.com/leodido/go-urn v1.4.0 h1:WT9HwE9SGECu3lg4d/dIA+jxlljEa1/ffXKmRjqdmIQ=
++github.com/leodido/go-urn v1.4.0/go.mod h1:bvxc+MVxLKB4z00jd1z+Dvzr47oO32F/QSNjSBOlFxI=
++github.com/mattn/go-isatty v0.0.20 h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWEY=
++github.com/mattn/go-isatty v0.0.20/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D7dTCTo3Y=
++github.com/mattn/go-sqlite3 v1.14.22 h1:2gZY6PC6kBnID23Tichd1K+Z0oS6nE/XwU+Vz/5o4kU=
++github.com/mattn/go-sqlite3 v1.14.22/go.mod h1:Uh1q+B4BYcTPb+yiD3kU8Ct7aC0hY9fxUwlHK0RXw+Y=
++github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=
++github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd h1:TRLaZ9cD/w8PVh93nsPXa1VrQ6jlwL5oN8l14QlcNfg=
++github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=
++github.com/modern-go/reflect2 v1.0.2 h1:xBagoLtFs94CBntxluKeaWgTMpvLxC4ur3nMaC9Gz0M=
++github.com/modern-go/reflect2 v1.0.2/go.mod h1:yWuevngMOJpCy52FWWMvUC8ws7m/LJsjYzDa0/r8luk=
++github.com/pelletier/go-toml/v2 v2.2.3 h1:YmeHyLY8mFWbdkNWwpr+qIL2bEqT0o95WSdkNHvL12M=
++github.com/pelletier/go-toml/v2 v2.2.3/go.mod h1:MfCQTFTvCcUyyvvwm1+G6H/jORL20Xlb6rzQu9GuUkc=
++github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
++github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
++github.com/rogpeppe/go-internal v1.14.1 h1:UQB4HGPB6osV0SQTLymcB4TgvyWu6ZyliaW0tI/otEQ=
++github.com/rogpeppe/go-internal v1.14.1/go.mod h1:MaRKkUm5W0goXpeCfT7UZI6fk/L7L7so1lCWt35ZSgc=
++github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
++github.com/stretchr/objx v0.4.0/go.mod h1:YvHI0jy2hoMjB+UWwv71VJQ9isScKT/TqJzVSSt89Yw=
++github.com/stretchr/objx v0.5.0/go.mod h1:Yh+to48EsGEfYuaHDzXPcE3xhTkx73EhmCGUpEOglKo=
++github.com/stretchr/objx v0.5.2/go.mod h1:FRsXN1f5AsAjCGJKqEizvkpNtU+EGNCLh3NxZ/8L+MA=
++github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
++github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
++github.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
++github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO+kdMU+MU=
++github.com/stretchr/testify v1.8.1/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
++github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
++github.com/stretchr/testify v1.10.0 h1:Xv5erBjTwe/5IxqUQTdXv5kgmIvbHo3QQyRwhJsOfJA=
++github.com/stretchr/testify v1.10.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
++github.com/twitchyliquid64/golang-asm v0.15.1 h1:SU5vSMR7hnwNxj24w34ZyCi/FmDZTkS4MhqMhdFk5YI=
++github.com/twitchyliquid64/golang-asm v0.15.1/go.mod h1:a1lVb/DtPvCB8fslRZhAngC2+aY1QWCk3Cedj/Gdt08=
++github.com/ugorji/go/codec v1.2.12 h1:9LC83zGrHhuUA9l16C9AHXAqEV/2wBQ4nkvumAE65EE=
++github.com/ugorji/go/codec v1.2.12/go.mod h1:UNopzCgEMSXjBc6AOMqYvWC1ktqTAfzJZUZgYf6w6lg=
++golang.org/x/arch v0.15.0 h1:QtOrQd0bTUnhNVNndMpLHNWrDmYzZ2KDqSrEymqInZw=
++golang.org/x/arch v0.15.0/go.mod h1:JmwW7aLIoRUKgaTzhkiEFxvcEiQGyOg9BMonBJUS7EE=
++golang.org/x/crypto v0.36.0 h1:AnAEvhDddvBdpY+uR+MyHmuZzzNqXSe/GvuDeob5L34=
++golang.org/x/crypto v0.36.0/go.mod h1:Y4J0ReaxCR1IMaabaSMugxJES1EpwhBHhv2bDHklZvc=
++golang.org/x/net v0.38.0 h1:vRMAPTMaeGqVhG5QyLJHqNDwecKTomGeqbnfZyKlBI8=
++golang.org/x/net v0.38.0/go.mod h1:ivrbrMbzFq5J41QOQh0siUuly180yBYtLp+CKbEaFx8=
++golang.org/x/sys v0.6.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
++golang.org/x/sys v0.31.0 h1:ioabZlmFYtWhL+TRYpcnNlLwhyxaM9kWTDEmfnprqik=
++golang.org/x/sys v0.31.0/go.mod h1:BJP2sWEmIv4KK5OTEluFJCKSidICx8ciO85XgH3Ak8k=
++golang.org/x/text v0.23.0 h1:D71I7dUrlY+VX0gQShAThNGHFxZ13dGLBHQLVl1mJlY=
++golang.org/x/text v0.23.0/go.mod h1:/BLNzu4aZCJ1+kcD0DNRotWKage4q2rGVAg4o22unh4=
++golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543 h1:E7g+9GITq07hpfrRu66IVDexMakfv52eLZ2CXBWiKr4=
++golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
++google.golang.org/protobuf v1.36.6 h1:z1NpPI8ku2WgiWnf+t9wTPsn6eP1L7ksHUlkfLvd9xY=
++google.golang.org/protobuf v1.36.6/go.mod h1:jduwjTPXsFjZGTmRluh+L6NjiWu7pchiJ2/5YcXBHnY=
++gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
++gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c h1:Hei/4ADfdWqJk1ZMxUNpqntNwaWcugrBjAiHlqqRiVk=
++gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c/go.mod h1:JHkPIbrfpd72SG/EVd6muEfDQjcINNoR0C8j2r3qZ4Q=
++gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
++gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
++gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
++gorm.io/driver/postgres v1.5.4 h1:Iyrp9Meh3GmbSuyIAGyjkN+n9K+GHX9b9MqsTL4EJCo=
++gorm.io/driver/postgres v1.5.4/go.mod h1:Bgo89+h0CRcdA33Y6frlaHHVuTdOf87pmyzwW9C/BH0=
++gorm.io/driver/sqlite v1.6.0 h1:WHRRrIiulaPiPFmDcod6prc4l2VGVWHz80KspNsxSfQ=
++gorm.io/driver/sqlite v1.6.0/go.mod h1:AO9V1qIQddBESngQUKWL9yoH93HIeA1X6V633rBwyT8=
++gorm.io/gorm v1.30.0 h1:qbT5aPv1UH8gI99OsRlvDToLxW5zR7FzS9acZDOZcgs=
++gorm.io/gorm v1.30.0/go.mod h1:8Z33v652h4//uMA76KjeDH8mJXPm1QNCYrMeatR0DOE=
++nullprogram.com/x/optparse v1.0.0/go.mod h1:KdyPE+Igbe0jQUrVfMqDMeJQIJZEuyV7pjYmp6pbG50=
+diff --git a/project-management-platform/backend/internal/api/handlers/auth_handler.go b/project-management-platform/backend/internal/api/handlers/auth_handler.go
+index b72b1b11f980577ccdaa578c28558c40e52666ee..8be5cd99055d38dc2cc776581e910be7ef36f60a 100644
+--- a/project-management-platform/backend/internal/api/handlers/auth_handler.go
++++ b/project-management-platform/backend/internal/api/handlers/auth_handler.go
+@@ -32,86 +32,85 @@ func (h *AuthHandler) Login(c *gin.Context) {
+ 	}
+ 
+ 	c.JSON(http.StatusOK, response)
+ }
+ 
+ func (h *AuthHandler) Register(c *gin.Context) {
+ 	var req models.CreateUserRequest
+ 	if err := c.ShouldBindJSON(&req); err != nil {
+ 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+ 		return
+ 	}
+ 
+ 	user, err := h.authService.Register(&req)
+ 	if err != nil {
+ 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+ 		return
+ 	}
+ 
+ 	c.JSON(http.StatusCreated, gin.H{"user": user})
+ }
+ 
+ func (h *AuthHandler) RefreshToken(c *gin.Context) {
+ 	var req struct {
+ 		RefreshToken string `json:"refresh_token" binding:"required"`
+ 	}
+-	
++
+ 	if err := c.ShouldBindJSON(&req); err != nil {
+ 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+ 		return
+ 	}
+ 
+ 	response, err := h.authService.RefreshToken(req.RefreshToken)
+ 	if err != nil {
+ 		c.JSON(http.StatusUnauthorized, gin.H{"error": err.Error()})
+ 		return
+ 	}
+ 
+ 	c.JSON(http.StatusOK, response)
+ }
+ 
+ func (h *AuthHandler) GetProfile(c *gin.Context) {
+ 	userID := c.GetString("user_id")
+-	
++
+ 	user, err := h.authService.GetUserByID(userID)
+ 	if err != nil {
+ 		c.JSON(http.StatusNotFound, gin.H{"error": "Usuario no encontrado"})
+ 		return
+ 	}
+ 
+ 	c.JSON(http.StatusOK, gin.H{"user": user.ToProfile()})
+ }
+ 
+ func (h *AuthHandler) UpdateProfile(c *gin.Context) {
+-	userID := c.GetString("user_id")
+-	
++
+ 	var req models.UpdateUserRequest
+ 	if err := c.ShouldBindJSON(&req); err != nil {
+ 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+ 		return
+ 	}
+ 
+ 	// TODO: Implementar actualización de perfil
+ 	c.JSON(http.StatusOK, gin.H{"message": "Perfil actualizado"})
+ }
+ 
+ func (h *AuthHandler) ChangePassword(c *gin.Context) {
+ 	userID := c.GetString("user_id")
+-	
++
+ 	var req models.ChangePasswordRequest
+ 	if err := c.ShouldBindJSON(&req); err != nil {
+ 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+ 		return
+ 	}
+ 
+ 	if err := h.authService.ChangePassword(userID, &req); err != nil {
+ 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+ 		return
+ 	}
+ 
+ 	c.JSON(http.StatusOK, gin.H{"message": "Contraseña cambiada exitosamente"})
+ }
+ 
+ func (h *AuthHandler) Logout(c *gin.Context) {
+ 	// TODO: Implementar blacklist de tokens si es necesario
+ 	c.JSON(http.StatusOK, gin.H{"message": "Sesión cerrada exitosamente"})
+ }
+diff --git a/project-management-platform/backend/internal/api/handlers/sprint_handler.go b/project-management-platform/backend/internal/api/handlers/sprint_handler.go
+index 63dd5af616f6103d134635feb5ba144a07882fbf..fa3053ddbdddec67c5abb95f084251cab856d3eb 100644
+--- a/project-management-platform/backend/internal/api/handlers/sprint_handler.go
++++ b/project-management-platform/backend/internal/api/handlers/sprint_handler.go
+@@ -1,30 +1,29 @@
+ package handlers
+ 
+ import (
+ 	"net/http"
+-	"strconv"
+ 
+ 	"github.com/company/project-management-platform/internal/models"
+ 	"github.com/company/project-management-platform/internal/services"
+ 	"github.com/company/project-management-platform/internal/utils"
+ 	"github.com/gin-gonic/gin"
+ 	"github.com/google/uuid"
+ )
+ 
+ type SprintHandler struct {
+ 	sprintService *services.SprintService
+ }
+ 
+ func NewSprintHandler(sprintService *services.SprintService) *SprintHandler {
+ 	return &SprintHandler{
+ 		sprintService: sprintService,
+ 	}
+ }
+ 
+ func (h *SprintHandler) CreateSprint(c *gin.Context) {
+ 	userID, _ := uuid.Parse(c.GetString("user_id"))
+ 	projectID, err := uuid.Parse(c.Param("project_id"))
+ 	if err != nil {
+ 		utils.ValidationErrorResponse(c, "ID de proyecto inválido")
+ 		return
+ 	}
+diff --git a/project-management-platform/backend/internal/api/handlers/timetracking_handler.go b/project-management-platform/backend/internal/api/handlers/timetracking_handler.go
+index 2cb0423f5e9231cc653d889c460bf3e319740f12..fe868c8a93529c3450ecd5b9a332fabc8ce44790 100644
+--- a/project-management-platform/backend/internal/api/handlers/timetracking_handler.go
++++ b/project-management-platform/backend/internal/api/handlers/timetracking_handler.go
+@@ -1,30 +1,29 @@
+ package handlers
+ 
+ import (
+ 	"net/http"
+-	"strconv"
+ 	"time"
+ 
+ 	"github.com/company/project-management-platform/internal/models"
+ 	"github.com/company/project-management-platform/internal/services"
+ 	"github.com/company/project-management-platform/internal/utils"
+ 	"github.com/gin-gonic/gin"
+ 	"github.com/google/uuid"
+ )
+ 
+ type TimeTrackingHandler struct {
+ 	timeTrackingService *services.TimeTrackingService
+ }
+ 
+ func NewTimeTrackingHandler(timeTrackingService *services.TimeTrackingService) *TimeTrackingHandler {
+ 	return &TimeTrackingHandler{
+ 		timeTrackingService: timeTrackingService,
+ 	}
+ }
+ 
+ func (h *TimeTrackingHandler) StartTimeEntry(c *gin.Context) {
+ 	userID, _ := uuid.Parse(c.GetString("user_id"))
+ 	projectID, err := uuid.Parse(c.Param("project_id"))
+ 	if err != nil {
+ 		utils.ValidationErrorResponse(c, "ID de proyecto inválido")
+ 		return
+@@ -47,51 +46,51 @@ func (h *TimeTrackingHandler) StartTimeEntry(c *gin.Context) {
+ 
+ func (h *TimeTrackingHandler) StopTimeEntry(c *gin.Context) {
+ 	userID, _ := uuid.Parse(c.GetString("user_id"))
+ 	entryID, err := uuid.Parse(c.Param("id"))
+ 	if err != nil {
+ 		utils.ValidationErrorResponse(c, "ID de entrada inválido")
+ 		return
+ 	}
+ 
+ 	var req struct {
+ 		EndTime *time.Time `json:"end_time"`
+ 	}
+ 	c.ShouldBindJSON(&req)
+ 
+ 	entry, err := h.timeTrackingService.StopTimeEntry(entryID, userID, req.EndTime)
+ 	if err != nil {
+ 		utils.ErrorResponse(c, http.StatusBadRequest, err.Error())
+ 		return
+ 	}
+ 
+ 	utils.SuccessResponse(c, entry)
+ }
+ 
+ func (h *TimeTrackingHandler) GetTimeEntries(c *gin.Context) {
+ 	userID, _ := uuid.Parse(c.GetString("user_id"))
+-	
++
+ 	var projectID *uuid.UUID
+ 	if projectIDStr := c.Query("project_id"); projectIDStr != "" {
+ 		if id, err := uuid.Parse(projectIDStr); err == nil {
+ 			projectID = &id
+ 		}
+ 	}
+ 
+ 	var startDate, endDate *time.Time
+ 	if startDateStr := c.Query("start_date"); startDateStr != "" {
+ 		if t, err := time.Parse("2006-01-02", startDateStr); err == nil {
+ 			startDate = &t
+ 		}
+ 	}
+ 	if endDateStr := c.Query("end_date"); endDateStr != "" {
+ 		if t, err := time.Parse("2006-01-02", endDateStr); err == nil {
+ 			endDate = &t
+ 		}
+ 	}
+ 
+ 	entries, err := h.timeTrackingService.GetTimeEntries(userID, projectID, startDate, endDate)
+ 	if err != nil {
+ 		utils.ErrorResponse(c, http.StatusInternalServerError, err.Error())
+ 		return
+ 	}
+ 
+@@ -151,51 +150,51 @@ func (h *TimeTrackingHandler) DeleteTimeEntry(c *gin.Context) {
+ 		return
+ 	}
+ 
+ 	c.JSON(http.StatusOK, gin.H{"message": "Entrada de tiempo eliminada"})
+ }
+ 
+ func (h *TimeTrackingHandler) GetActiveTimeEntry(c *gin.Context) {
+ 	userID, _ := uuid.Parse(c.GetString("user_id"))
+ 
+ 	entry, err := h.timeTrackingService.GetActiveTimeEntry(userID)
+ 	if err != nil {
+ 		utils.ErrorResponse(c, http.StatusInternalServerError, err.Error())
+ 		return
+ 	}
+ 
+ 	if entry == nil {
+ 		c.JSON(http.StatusOK, gin.H{"active_entry": nil})
+ 		return
+ 	}
+ 
+ 	utils.SuccessResponse(c, gin.H{"active_entry": entry})
+ }
+ 
+ func (h *TimeTrackingHandler) GetTimeReports(c *gin.Context) {
+ 	userID, _ := uuid.Parse(c.GetString("user_id"))
+-	
++
+ 	var projectID *uuid.UUID
+ 	if projectIDStr := c.Query("project_id"); projectIDStr != "" {
+ 		if id, err := uuid.Parse(projectIDStr); err == nil {
+ 			projectID = &id
+ 		}
+ 	}
+ 
+ 	startDate, err := time.Parse("2006-01-02", c.DefaultQuery("start_date", time.Now().AddDate(0, 0, -30).Format("2006-01-02")))
+ 	if err != nil {
+ 		utils.ValidationErrorResponse(c, "Fecha de inicio inválida")
+ 		return
+ 	}
+ 
+ 	endDate, err := time.Parse("2006-01-02", c.DefaultQuery("end_date", time.Now().Format("2006-01-02")))
+ 	if err != nil {
+ 		utils.ValidationErrorResponse(c, "Fecha de fin inválida")
+ 		return
+ 	}
+ 
+ 	reports, err := h.timeTrackingService.GetTimeReports(userID, projectID, startDate, endDate)
+ 	if err != nil {
+ 		utils.ErrorResponse(c, http.StatusInternalServerError, err.Error())
+ 		return
+ 	}
+ 
+diff --git a/project-management-platform/backend/internal/models/extra.go b/project-management-platform/backend/internal/models/extra.go
+new file mode 100644
+index 0000000000000000000000000000000000000000..c9062d9923549ffb0e17c102467c91deb30d7952
+--- /dev/null
++++ b/project-management-platform/backend/internal/models/extra.go
+@@ -0,0 +1,70 @@
++package models
++
++import (
++	"github.com/google/uuid"
++	"time"
++)
++
++// Epic represents a high level grouping of tasks
++// This is a simplified placeholder so the code compiles
++// and can be extended in the future.
++type Epic struct {
++	BaseModel
++	ProjectID   uuid.UUID `json:"project_id" gorm:"not null"`
++	Name        string    `json:"name" gorm:"not null"`
++	Description string    `json:"description"`
++
++	// Relationships
++	Project *Project `json:"project,omitempty"`
++	Tasks   []Task   `json:"tasks,omitempty"`
++}
++
++// Board represents a kanban board within a project.
++type Board struct {
++	BaseModel
++	ProjectID   uuid.UUID `json:"project_id" gorm:"not null"`
++	Name        string    `json:"name" gorm:"not null"`
++	Description string    `json:"description"`
++
++	// Relationship
++	Project *Project `json:"project,omitempty"`
++}
++
++// Attachment represents a file attached to a task.
++type Attachment struct {
++	BaseModel
++	TaskID   uuid.UUID `json:"task_id" gorm:"not null"`
++	FileName string    `json:"file_name" gorm:"not null"`
++	FileURL  string    `json:"file_url" gorm:"not null"`
++	FileSize int64     `json:"file_size"`
++	MimeType string    `json:"mime_type"`
++
++	// Relationship
++	Task *Task `json:"task,omitempty"`
++}
++
++// AuditLog stores auditing information for user actions.
++type AuditLog struct {
++	BaseModel
++	UserID     uuid.UUID              `json:"user_id" gorm:"not null"`
++	Action     string                 `json:"action" gorm:"not null"`
++	EntityType string                 `json:"entity_type"`
++	EntityID   *uuid.UUID             `json:"entity_id"`
++	Metadata   map[string]interface{} `json:"metadata" gorm:"type:jsonb"`
++
++	// Relationship
++	User *User `json:"user,omitempty"`
++}
++
++// TaskAssignment represents a user assigned to a task.
++type TaskAssignment struct {
++	BaseModel
++	TaskID     uuid.UUID `json:"task_id" gorm:"not null"`
++	UserID     uuid.UUID `json:"user_id" gorm:"not null"`
++	AssignedAt time.Time `json:"assigned_at" gorm:"default:CURRENT_TIMESTAMP"`
++	AssignedBy uuid.UUID `json:"assigned_by" gorm:"not null"`
++
++	// Relationships
++	Task *Task `json:"task,omitempty"`
++	User *User `json:"user,omitempty"`
++}
+diff --git a/project-management-platform/backend/internal/models/project.go b/project-management-platform/backend/internal/models/project.go
+index 610b12745993f4265ee15e9c549eb0f06c620693..da289819dcb82a61734a3b120cbb5244f58119df 100644
+--- a/project-management-platform/backend/internal/models/project.go
++++ b/project-management-platform/backend/internal/models/project.go
+@@ -1,142 +1,146 @@
+ package models
+ 
+ import (
+-	"time"
+ 	"github.com/google/uuid"
++	"time"
+ )
+ 
+ type ProjectStatus string
+ 
+ const (
+ 	ProjectStatusPlanning  ProjectStatus = "planning"
+ 	ProjectStatusActive    ProjectStatus = "active"
+ 	ProjectStatusOnHold    ProjectStatus = "on_hold"
+ 	ProjectStatusCompleted ProjectStatus = "completed"
+ 	ProjectStatusArchived  ProjectStatus = "archived"
+ )
+ 
+ type Project struct {
+ 	BaseModel
+-	Name        string        `json:"name" gorm:"not null"`
+-	Key         string        `json:"key" gorm:"uniqueIndex;not null"` // Ej: "PROJ"
+-	Description string        `json:"description"`
+-	Status      ProjectStatus `json:"status" gorm:"default:'planning'"`
+-	StartDate   *time.Time    `json:"start_date"`
+-	EndDate     *time.Time    `json:"end_date"`
+-	Budget      float64       `json:"budget"`
+-	IsPublic    bool          `json:"is_public" gorm:"default:false"`
+-	
++	Name             string                 `json:"name" gorm:"not null"`
++	Key              string                 `json:"key" gorm:"uniqueIndex;not null"` // Ej: "PROJ"
++	Description      string                 `json:"description"`
++	Status           ProjectStatus          `json:"status" gorm:"default:'planning'"`
++	OwnerID          uuid.UUID              `json:"owner_id" gorm:"not null"`
++	StartDate        *time.Time             `json:"start_date"`
++	EndDate          *time.Time             `json:"end_date"`
++	Budget           float64                `json:"budget"`
++	RepositoryURL    string                 `json:"repository_url"`
++	DocumentationURL string                 `json:"documentation_url"`
++	Metadata         map[string]interface{} `json:"metadata" gorm:"type:jsonb"`
++	IsPublic         bool                   `json:"is_public" gorm:"default:false"`
++
+ 	// Configuraciones
+ 	Settings ProjectSettings `json:"settings" gorm:"embedded"`
+-	
++
+ 	// Relaciones
+ 	Members []ProjectMember `json:"members,omitempty"`
+ 	Epics   []Epic          `json:"epics,omitempty"`
+ 	Sprints []Sprint        `json:"sprints,omitempty"`
+ 	Tasks   []Task          `json:"tasks,omitempty"`
+ 	Boards  []Board         `json:"boards,omitempty"`
+ }
+ 
+ type ProjectSettings struct {
+ 	AllowExternalUsers bool     `json:"allow_external_users" gorm:"default:false"`
+ 	DefaultTaskType    string   `json:"default_task_type" gorm:"default:'task'"`
+ 	WorkflowStates     []string `json:"workflow_states" gorm:"type:jsonb"`
+ 	EstimationUnit     string   `json:"estimation_unit" gorm:"default:'hours'"` // hours, points
+ }
+ 
+ type ProjectMember struct {
+ 	BaseModel
+-	ProjectID uuid.UUID       `json:"project_id" gorm:"not null"`
+-	UserID    uuid.UUID       `json:"user_id" gorm:"not null"`
+-	Role      ProjectRole     `json:"role" gorm:"not null"`
+-	JoinedAt  time.Time       `json:"joined_at" gorm:"default:CURRENT_TIMESTAMP"`
+-	
++	ProjectID uuid.UUID   `json:"project_id" gorm:"not null"`
++	UserID    uuid.UUID   `json:"user_id" gorm:"not null"`
++	Role      ProjectRole `json:"role" gorm:"not null"`
++	JoinedAt  time.Time   `json:"joined_at" gorm:"default:CURRENT_TIMESTAMP"`
++
+ 	// Relaciones
+ 	Project *Project `json:"project,omitempty"`
+ 	User    *User    `json:"user,omitempty"`
+ }
+ 
+ type ProjectRole string
+ 
+ const (
+-	ProjectRoleOwner      ProjectRole = "owner"
+-	ProjectRoleManager    ProjectRole = "manager"
+-	ProjectRoleDeveloper  ProjectRole = "developer"
+-	ProjectRoleTester     ProjectRole = "tester"
+-	ProjectRoleViewer     ProjectRole = "viewer"
++	ProjectRoleOwner     ProjectRole = "owner"
++	ProjectRoleManager   ProjectRole = "manager"
++	ProjectRoleDeveloper ProjectRole = "developer"
++	ProjectRoleTester    ProjectRole = "tester"
++	ProjectRoleViewer    ProjectRole = "viewer"
+ )
+ 
+ type CreateProjectRequest struct {
+-	Name        string            `json:"name" binding:"required,min=2,max=100"`
+-	Key         string            `json:"key" binding:"required,min=2,max=10,uppercase"`
+-	Description string            `json:"description"`
+-	StartDate   *time.Time        `json:"start_date"`
+-	EndDate     *time.Time        `json:"end_date"`
+-	Budget      float64           `json:"budget"`
+-	IsPublic    bool              `json:"is_public"`
+-	Settings    ProjectSettings   `json:"settings"`
++	Name        string                `json:"name" binding:"required,min=2,max=100"`
++	Key         string                `json:"key" binding:"required,min=2,max=10,uppercase"`
++	Description string                `json:"description"`
++	StartDate   *time.Time            `json:"start_date"`
++	EndDate     *time.Time            `json:"end_date"`
++	Budget      float64               `json:"budget"`
++	IsPublic    bool                  `json:"is_public"`
++	Settings    ProjectSettings       `json:"settings"`
+ 	Members     []ProjectMemberInvite `json:"members"`
+ }
+ 
+ type UpdateProjectRequest struct {
+ 	Name        string          `json:"name,omitempty" binding:"omitempty,min=2,max=100"`
+ 	Description string          `json:"description,omitempty"`
+ 	Status      ProjectStatus   `json:"status,omitempty"`
+ 	StartDate   *time.Time      `json:"start_date,omitempty"`
+ 	EndDate     *time.Time      `json:"end_date,omitempty"`
+ 	Budget      float64         `json:"budget,omitempty"`
+ 	IsPublic    *bool           `json:"is_public,omitempty"`
+ 	Settings    ProjectSettings `json:"settings,omitempty"`
+ }
+ 
+ type ProjectMemberInvite struct {
+ 	UserID uuid.UUID   `json:"user_id" binding:"required"`
+ 	Role   ProjectRole `json:"role" binding:"required"`
+ }
+ 
+ type ProjectStats struct {
+ 	TotalTasks      int `json:"total_tasks"`
+ 	CompletedTasks  int `json:"completed_tasks"`
+ 	InProgressTasks int `json:"in_progress_tasks"`
+ 	TodoTasks       int `json:"todo_tasks"`
+ 	TotalMembers    int `json:"total_members"`
+ 	ActiveSprints   int `json:"active_sprints"`
+ }
+ 
+ type ProjectDashboard struct {
+-	Project     *Project      `json:"project"`
+-	Stats       *ProjectStats `json:"stats"`
+-	RecentTasks []Task        `json:"recent_tasks"`
+-	ActiveSprint *Sprint      `json:"active_sprint,omitempty"`
++	Project      *Project      `json:"project"`
++	Stats        *ProjectStats `json:"stats"`
++	RecentTasks  []Task        `json:"recent_tasks"`
++	ActiveSprint *Sprint       `json:"active_sprint,omitempty"`
+ }
+ 
+ func (p *Project) IsActive() bool {
+ 	return p.Status == ProjectStatusActive
+ }
+ 
+ func (p *Project) CanUserAccess(userID uuid.UUID, userRole UserRole) bool {
+ 	if userRole == RoleAdmin {
+ 		return true
+ 	}
+-	
++
+ 	if p.IsPublic {
+ 		return true
+ 	}
+-	
++
+ 	// Verificar membresía en el proyecto
+ 	for _, member := range p.Members {
+ 		if member.UserID == userID {
+ 			return true
+ 		}
+ 	}
+-	
++
+ 	return false
+ }
+ 
+ func (pm *ProjectMember) CanManageProject() bool {
+ 	return pm.Role == ProjectRoleOwner || pm.Role == ProjectRoleManager
+ }
+ 
+ func (pm *ProjectMember) CanEditTasks() bool {
+ 	return pm.Role != ProjectRoleViewer
+ }
+diff --git a/project-management-platform/backend/internal/services/notification_service.go b/project-management-platform/backend/internal/services/notification_service.go
+index 5b5639b74d0b7a2d04bd1b7371a422139f954ae0..c8ef0623835706ef5e4057535cba1b0919f50f9b 100644
+--- a/project-management-platform/backend/internal/services/notification_service.go
++++ b/project-management-platform/backend/internal/services/notification_service.go
+@@ -1,42 +1,43 @@
+ package services
+ 
+ import (
+ 	"fmt"
+ 	"time"
+ 
+ 	"github.com/company/project-management-platform/internal/models"
++	internalws "github.com/company/project-management-platform/internal/websocket"
+ 	"github.com/google/uuid"
+ 	"gorm.io/gorm"
+ )
+ 
+ type NotificationService struct {
+-	db *gorm.DB
+-	wsHub *websocket.Hub // Para notificaciones en tiempo real
++	db    *gorm.DB
++	wsHub *internalws.Hub // Para notificaciones en tiempo real
+ }
+ 
+-func NewNotificationService(db *gorm.DB, wsHub *websocket.Hub) *NotificationService {
++func NewNotificationService(db *gorm.DB, wsHub *internalws.Hub) *NotificationService {
+ 	return &NotificationService{
+ 		db:    db,
+ 		wsHub: wsHub,
+ 	}
+ }
+ 
+ func (s *NotificationService) CreateNotifications(req *models.CreateNotificationRequest) error {
+ 	for _, userID := range req.UserIDs {
+ 		notification := &models.Notification{
+ 			Title:      req.Title,
+ 			Content:    req.Content,
+ 			Type:       req.Type,
+ 			UserID:     userID,
+ 			ActionURL:  req.ActionURL,
+ 			EntityType: req.EntityType,
+ 			EntityID:   req.EntityID,
+ 			Metadata:   req.Metadata,
+ 		}
+ 
+ 		if err := s.db.Create(notification).Error; err != nil {
+ 			return fmt.Errorf("error creando notificación: %w", err)
+ 		}
+ 
+ 		// Enviar notificación en tiempo real via WebSocket
+ 		go s.sendRealTimeNotification(notification)
+@@ -62,71 +63,71 @@ func (s *NotificationService) GetUserNotifications(userID uuid.UUID, filter *mod
+ 		if filter.EntityType != "" {
+ 			query = query.Where("entity_type = ?", filter.EntityType)
+ 		}
+ 	}
+ 
+ 	// Contar total
+ 	var total int64
+ 	query.Model(&models.Notification{}).Count(&total)
+ 
+ 	// Obtener notificaciones
+ 	var notifications []models.Notification
+ 	if err := query.Order("created_at DESC").
+ 		Limit(limit).
+ 		Offset(offset).
+ 		Find(&notifications).Error; err != nil {
+ 		return nil, 0, fmt.Errorf("error obteniendo notificaciones: %w", err)
+ 	}
+ 
+ 	return notifications, total, nil
+ }
+ 
+ func (s *NotificationService) MarkAsRead(notificationID, userID uuid.UUID) error {
+ 	result := s.db.Model(&models.Notification{}).
+ 		Where("id = ? AND user_id = ?", notificationID, userID).
+ 		Updates(map[string]interface{}{
+-			"is_read":  true,
+-			"read_at":  time.Now(),
++			"is_read": true,
++			"read_at": time.Now(),
+ 		})
+ 
+ 	if result.Error != nil {
+ 		return fmt.Errorf("error marcando notificación como leída: %w", result.Error)
+ 	}
+ 
+ 	if result.RowsAffected == 0 {
+ 		return fmt.Errorf("notificación no encontrada")
+ 	}
+ 
+ 	return nil
+ }
+ 
+ func (s *NotificationService) MarkAllAsRead(userID uuid.UUID) error {
+ 	return s.db.Model(&models.Notification{}).
+ 		Where("user_id = ? AND is_read = ?", userID, false).
+ 		Updates(map[string]interface{}{
+-			"is_read":  true,
+-			"read_at":  time.Now(),
++			"is_read": true,
++			"read_at": time.Now(),
+ 		}).Error
+ }
+ 
+ func (s *NotificationService) DeleteNotification(notificationID, userID uuid.UUID) error {
+ 	result := s.db.Where("id = ? AND user_id = ?", notificationID, userID).
+ 		Delete(&models.Notification{})
+ 
+ 	if result.Error != nil {
+ 		return fmt.Errorf("error eliminando notificación: %w", result.Error)
+ 	}
+ 
+ 	if result.RowsAffected == 0 {
+ 		return fmt.Errorf("notificación no encontrada")
+ 	}
+ 
+ 	return nil
+ }
+ 
+ func (s *NotificationService) GetUnreadCount(userID uuid.UUID) (int64, error) {
+ 	var count int64
+ 	err := s.db.Model(&models.Notification{}).
+ 		Where("user_id = ? AND is_read = ?", userID, false).
+ 		Count(&count).Error
+ 
+ 	return count, err
+@@ -148,64 +149,63 @@ func (s *NotificationService) NotifyTaskAssigned(taskID, assigneeID, assignerID
+ 			"task_title":  taskTitle,
+ 		},
+ 	})
+ }
+ 
+ func (s *NotificationService) NotifyCommentAdded(taskID, commentID, commenterID uuid.UUID, taskTitle, commentContent string, mentionedUsers []uuid.UUID) error {
+ 	// Notificar a usuarios mencionados
+ 	if len(mentionedUsers) > 0 {
+ 		s.CreateNotifications(&models.CreateNotificationRequest{
+ 			Title:      "Te mencionaron en un comentario",
+ 			Content:    fmt.Sprintf("Te mencionaron en la tarea: %s", taskTitle),
+ 			Type:       models.NotificationTypeCommentMention,
+ 			UserIDs:    mentionedUsers,
+ 			ActionURL:  fmt.Sprintf("/tasks/%s#comment-%s", taskID, commentID),
+ 			EntityType: "comment",
+ 			EntityID:   &commentID,
+ 			Metadata: map[string]interface{}{
+ 				"task_id":         taskID,
+ 				"commenter_id":    commenterID,
+ 				"comment_content": commentContent,
+ 			},
+ 		})
+ 	}
+ 
+ 	// TODO: Notificar a seguidores de la tarea (implementar sistema de seguimiento)
+-	
++
+ 	return nil
+ }
+ 
+ func (s *NotificationService) NotifyProjectInvite(projectID, invitedUserID, inviterID uuid.UUID, projectName string) error {
+ 	return s.CreateNotifications(&models.CreateNotificationRequest{
+ 		Title:      "Invitación a proyecto",
+ 		Content:    fmt.Sprintf("Has sido invitado al proyecto: %s", projectName),
+ 		Type:       models.NotificationTypeProjectInvite,
+ 		UserIDs:    []uuid.UUID{invitedUserID},
+ 		ActionURL:  fmt.Sprintf("/projects/%s", projectID),
+ 		EntityType: "project",
+ 		EntityID:   &projectID,
+ 		Metadata: map[string]interface{}{
+ 			"inviter_id":   inviterID,
+ 			"project_name": projectName,
+ 		},
+ 	})
+ }
+ 
+ func (s *NotificationService) sendRealTimeNotification(notification *models.Notification) {
+ 	if s.wsHub != nil {
+ 		// Enviar notificación via WebSocket
+-		s.wsHub.BroadcastToUser(notification.UserID.String(), &websocket.Message{
+-			Type:   "notification",
+-			UserID: notification.UserID.String(),
+-			Data:   notification,
++		s.wsHub.BroadcastToUser(notification.UserID.String(), &internalws.Message{
++			Type:      "notification",
++			UserID:    notification.UserID.String(),
++			Data:      notification,
+ 			Timestamp: time.Now().Unix(),
+ 		})
+ 	}
+ }
+ 
+ func (s *NotificationService) sendEmailNotification(notification *models.Notification) {
+ 	// TODO: Implementar envío de emails
+ 	// Verificar preferencias del usuario
+ 	// Usar servicio de email configurado
+-	fmt.Printf("Sending email notification to user %s: %s
+-", notification.UserID, notification.Title)
++	fmt.Printf("Sending email notification to user %s: %s", notification.UserID, notification.Title)
+ }
+diff --git a/project-management-platform/backend/internal/services/sprint_service.go b/project-management-platform/backend/internal/services/sprint_service.go
+index 59e2599a92d37ccbb28f07bed71de98967eb8ad3..ed87c425ff4a085ac0ebdfe15e0615d752952fd1 100644
+--- a/project-management-platform/backend/internal/services/sprint_service.go
++++ b/project-management-platform/backend/internal/services/sprint_service.go
+@@ -1,180 +1,180 @@
+ package services
+ 
+ import (
+ 	"fmt"
+ 	"time"
+ 
+ 	"github.com/company/project-management-platform/internal/models"
+ 	"github.com/google/uuid"
+ 	"gorm.io/gorm"
+ )
+ 
+ type SprintService struct {
+-	db *gorm.DB
++	db                  *gorm.DB
+ 	notificationService *NotificationService
+ }
+ 
+ func NewSprintService(db *gorm.DB, notificationService *NotificationService) *SprintService {
+ 	return &SprintService{
+ 		db:                  db,
+ 		notificationService: notificationService,
+ 	}
+ }
+ 
+ func (s *SprintService) CreateSprint(projectID, userID uuid.UUID, req *models.CreateSprintRequest) (*models.Sprint, error) {
+ 	// Validar fechas
+ 	if req.EndDate.Before(req.StartDate) {
+ 		return nil, fmt.Errorf("la fecha de fin debe ser posterior a la fecha de inicio")
+ 	}
+ 
+ 	sprint := &models.Sprint{
+ 		Name:        req.Name,
+ 		Description: req.Description,
+ 		ProjectID:   projectID,
+ 		StartDate:   req.StartDate,
+ 		EndDate:     req.EndDate,
+ 		Goal:        req.Goal,
+ 		Capacity:    req.Capacity,
+ 		Status:      models.SprintStatusPlanning,
+ 	}
+ 
+ 	if err := s.db.Create(sprint).Error; err != nil {
+ 		return nil, fmt.Errorf("error creando sprint: %w", err)
+ 	}
+ 
+ 	return s.GetSprint(sprint.ID, userID)
+ }
+ 
+ func (s *SprintService) GetSprints(projectID, userID uuid.UUID, status *models.SprintStatus) ([]models.Sprint, error) {
+ 	var sprints []models.Sprint
+-	
++
+ 	query := s.db.Where("project_id = ?", projectID).
+ 		Preload("Project").
+ 		Preload("Events").
+ 		Order("created_at DESC")
+ 
+ 	if status != nil {
+ 		query = query.Where("status = ?", *status)
+ 	}
+ 
+ 	if err := query.Find(&sprints).Error; err != nil {
+ 		return nil, fmt.Errorf("error obteniendo sprints: %w", err)
+ 	}
+ 
+ 	return sprints, nil
+ }
+ 
+ func (s *SprintService) GetSprint(sprintID, userID uuid.UUID) (*models.Sprint, error) {
+ 	var sprint models.Sprint
+-	
++
+ 	if err := s.db.Preload("Project").
+ 		Preload("Tasks").
+ 		Preload("Events").
+ 		Preload("Events.User").
+ 		First(&sprint, sprintID).Error; err != nil {
+ 		return nil, fmt.Errorf("error obteniendo sprint: %w", err)
+ 	}
+ 
+ 	return &sprint, nil
+ }
+ 
+ func (s *SprintService) UpdateSprint(sprintID, userID uuid.UUID, req *models.UpdateSprintRequest) (*models.Sprint, error) {
+ 	var sprint models.Sprint
+-	
++
+ 	if err := s.db.First(&sprint, sprintID).Error; err != nil {
+ 		return nil, fmt.Errorf("error obteniendo sprint: %w", err)
+ 	}
+ 
+ 	// Solo permitir actualizaciones en sprints no activos o completados
+ 	if sprint.Status == models.SprintStatusActive || sprint.Status == models.SprintStatusCompleted {
+ 		return nil, fmt.Errorf("no se puede modificar un sprint activo o completado")
+ 	}
+ 
+ 	// Actualizar campos
+ 	if req.Name != "" {
+ 		sprint.Name = req.Name
+ 	}
+ 	if req.Description != "" {
+ 		sprint.Description = req.Description
+ 	}
+ 	if !req.StartDate.IsZero() {
+ 		sprint.StartDate = req.StartDate
+ 	}
+ 	if !req.EndDate.IsZero() {
+ 		sprint.EndDate = req.EndDate
+ 	}
+ 	if req.Goal != "" {
+ 		sprint.Goal = req.Goal
+ 	}
+ 	if req.Capacity > 0 {
+ 		sprint.Capacity = req.Capacity
+ 	}
+ 
+ 	if err := s.db.Save(&sprint).Error; err != nil {
+ 		return nil, fmt.Errorf("error actualizando sprint: %w", err)
+ 	}
+ 
+ 	return s.GetSprint(sprintID, userID)
+ }
+ 
+ func (s *SprintService) StartSprint(sprintID, userID uuid.UUID) (*models.Sprint, error) {
+ 	var sprint models.Sprint
+-	
++
+ 	if err := s.db.First(&sprint, sprintID).Error; err != nil {
+ 		return nil, fmt.Errorf("error obteniendo sprint: %w", err)
+ 	}
+ 
+ 	if sprint.Status != models.SprintStatusPlanning {
+ 		return nil, fmt.Errorf("el sprint debe estar en estado de planificación para iniciarse")
+ 	}
+ 
+ 	// Verificar que no hay otro sprint activo en el proyecto
+ 	var activeSprint models.Sprint
+ 	if err := s.db.Where("project_id = ? AND status = ?", sprint.ProjectID, models.SprintStatusActive).
+ 		First(&activeSprint).Error; err == nil {
+ 		return nil, fmt.Errorf("ya hay un sprint activo en este proyecto")
+ 	}
+ 
+ 	sprint.Status = models.SprintStatusActive
+ 
+ 	if err := s.db.Save(&sprint).Error; err != nil {
+ 		return nil, fmt.Errorf("error iniciando sprint: %w", err)
+ 	}
+ 
+ 	// Crear evento de inicio
+ 	s.CreateSprintEvent(sprintID, userID, models.SprintEventTypePlanning, "Sprint iniciado", "El sprint ha sido iniciado")
+ 
+ 	// Notificar al equipo
+ 	go s.notifySprintStarted(&sprint, userID)
+ 
+ 	return s.GetSprint(sprintID, userID)
+ }
+ 
+ func (s *SprintService) CompleteSprint(sprintID, userID uuid.UUID) (*models.Sprint, error) {
+ 	var sprint models.Sprint
+-	
++
+ 	if err := s.db.Preload("Tasks").First(&sprint, sprintID).Error; err != nil {
+ 		return nil, fmt.Errorf("error obteniendo sprint: %w", err)
+ 	}
+ 
+ 	if sprint.Status != models.SprintStatusActive {
+ 		return nil, fmt.Errorf("el sprint debe estar activo para completarse")
+ 	}
+ 
+ 	sprint.Status = models.SprintStatusCompleted
+ 
+ 	// Calcular métricas finales
+ 	s.CalculateSprintMetrics(&sprint)
+ 
+ 	if err := s.db.Save(&sprint).Error; err != nil {
+ 		return nil, fmt.Errorf("error completando sprint: %w", err)
+ 	}
+ 
+ 	// Crear evento de finalización
+ 	s.CreateSprintEvent(sprintID, userID, models.SprintEventTypeReview, "Sprint completado", "El sprint ha sido completado")
+ 
+ 	// Notificar al equipo
+ 	go s.notifySprintCompleted(&sprint, userID)
+ 
+ 	return s.GetSprint(sprintID, userID)
+ }
+@@ -218,99 +218,99 @@ func (s *SprintService) RemoveTaskFromSprint(sprintID, taskID, userID uuid.UUID)
+ 		s.db.Save(&sprint)
+ 	}
+ 
+ 	return nil
+ }
+ 
+ func (s *SprintService) CreateSprintEvent(sprintID, userID uuid.UUID, eventType models.SprintEventType, title, content string) (*models.SprintEvent, error) {
+ 	event := &models.SprintEvent{
+ 		SprintID: sprintID,
+ 		Type:     eventType,
+ 		Title:    title,
+ 		Content:  content,
+ 		UserID:   userID,
+ 		Date:     time.Now(),
+ 	}
+ 
+ 	if err := s.db.Create(event).Error; err != nil {
+ 		return nil, fmt.Errorf("error creando evento de sprint: %w", err)
+ 	}
+ 
+ 	return event, nil
+ }
+ 
+ func (s *SprintService) GetSprintEvents(sprintID uuid.UUID) ([]models.SprintEvent, error) {
+ 	var events []models.SprintEvent
+-	
++
+ 	if err := s.db.Where("sprint_id = ?", sprintID).
+ 		Preload("User").
+ 		Order("date DESC").
+ 		Find(&events).Error; err != nil {
+ 		return nil, fmt.Errorf("error obteniendo eventos del sprint: %w", err)
+ 	}
+ 
+ 	return events, nil
+ }
+ 
+ func (s *SprintService) CalculateSprintMetrics(sprint *models.Sprint) {
+ 	// Obtener tareas del sprint
+ 	var tasks []models.Task
+ 	s.db.Where("sprint_id = ?", sprint.ID).Find(&tasks)
+ 
+ 	committedPoints := 0
+ 	completedPoints := 0
+ 
+ 	for _, task := range tasks {
+-		if task.StoryPoints > 0 {
+-			committedPoints += task.StoryPoints
+-			if task.Status == models.TaskStatusCompleted {
+-				completedPoints += task.StoryPoints
++		if task.StoryPoints != nil && *task.StoryPoints > 0 {
++			committedPoints += *task.StoryPoints
++			if task.Status == models.TaskStatusDone {
++				completedPoints += *task.StoryPoints
+ 			}
+ 		}
+ 	}
+ 
+ 	sprint.CommittedPoints = committedPoints
+ 	sprint.CompletedPoints = completedPoints
+ 	sprint.Velocity = sprint.CalculateVelocity()
+ }
+ 
+ func (s *SprintService) GetSprintBurndownData(sprintID uuid.UUID) (map[string]interface{}, error) {
+ 	var sprint models.Sprint
+ 	if err := s.db.Preload("Tasks").First(&sprint, sprintID).Error; err != nil {
+ 		return nil, fmt.Errorf("error obteniendo sprint: %w", err)
+ 	}
+ 
+ 	// Calcular datos de burndown por día
+ 	burndownData := make(map[string]interface{})
+-	
++
+ 	// TODO: Implementar cálculo detallado de burndown chart
+ 	burndownData["sprint_id"] = sprintID
+ 	burndownData["total_points"] = sprint.CommittedPoints
+ 	burndownData["completed_points"] = sprint.CompletedPoints
+ 	burndownData["remaining_points"] = sprint.CommittedPoints - sprint.CompletedPoints
+ 	burndownData["days_remaining"] = sprint.GetDaysRemaining()
+-	
++
+ 	return burndownData, nil
+ }
+ 
+ func (s *SprintService) notifySprintStarted(sprint *models.Sprint, userID uuid.UUID) {
+ 	// Obtener miembros del proyecto
+ 	var members []models.ProjectMember
+ 	s.db.Where("project_id = ?", sprint.ProjectID).Find(&members)
+ 
+ 	userIDs := make([]uuid.UUID, len(members))
+ 	for i, member := range members {
+ 		userIDs[i] = member.UserID
+ 	}
+ 
+ 	s.notificationService.CreateNotifications(&models.CreateNotificationRequest{
+ 		Title:      "Sprint iniciado",
+ 		Content:    fmt.Sprintf("El sprint '%s' ha sido iniciado", sprint.Name),
+ 		Type:       models.NotificationTypeSprintStarted,
+ 		UserIDs:    userIDs,
+ 		ActionURL:  fmt.Sprintf("/sprints/%s", sprint.ID),
+ 		EntityType: "sprint",
+ 		EntityID:   &sprint.ID,
+ 	})
+ }
+ 
+ func (s *SprintService) notifySprintCompleted(sprint *models.Sprint, userID uuid.UUID) {

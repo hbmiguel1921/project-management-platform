@@ -1,8 +1,8 @@
 package models
 
 import (
-	"time"
 	"github.com/google/uuid"
+	"time"
 )
 
 type ProjectStatus string
@@ -17,18 +17,22 @@ const (
 
 type Project struct {
 	BaseModel
-	Name        string        `json:"name" gorm:"not null"`
-	Key         string        `json:"key" gorm:"uniqueIndex;not null"` // Ej: "PROJ"
-	Description string        `json:"description"`
-	Status      ProjectStatus `json:"status" gorm:"default:'planning'"`
-	StartDate   *time.Time    `json:"start_date"`
-	EndDate     *time.Time    `json:"end_date"`
-	Budget      float64       `json:"budget"`
-	IsPublic    bool          `json:"is_public" gorm:"default:false"`
-	
+	Name             string                 `json:"name" gorm:"not null"`
+	Key              string                 `json:"key" gorm:"uniqueIndex;not null"` // Ej: "PROJ"
+	Description      string                 `json:"description"`
+	Status           ProjectStatus          `json:"status" gorm:"default:'planning'"`
+	OwnerID          uuid.UUID              `json:"owner_id" gorm:"not null"`
+	StartDate        *time.Time             `json:"start_date"`
+	EndDate          *time.Time             `json:"end_date"`
+	Budget           float64                `json:"budget"`
+	RepositoryURL    string                 `json:"repository_url"`
+	DocumentationURL string                 `json:"documentation_url"`
+	Metadata         map[string]interface{} `json:"metadata" gorm:"type:jsonb"`
+	IsPublic         bool                   `json:"is_public" gorm:"default:false"`
+
 	// Configuraciones
 	Settings ProjectSettings `json:"settings" gorm:"embedded"`
-	
+
 	// Relaciones
 	Members []ProjectMember `json:"members,omitempty"`
 	Epics   []Epic          `json:"epics,omitempty"`
@@ -46,11 +50,11 @@ type ProjectSettings struct {
 
 type ProjectMember struct {
 	BaseModel
-	ProjectID uuid.UUID       `json:"project_id" gorm:"not null"`
-	UserID    uuid.UUID       `json:"user_id" gorm:"not null"`
-	Role      ProjectRole     `json:"role" gorm:"not null"`
-	JoinedAt  time.Time       `json:"joined_at" gorm:"default:CURRENT_TIMESTAMP"`
-	
+	ProjectID uuid.UUID   `json:"project_id" gorm:"not null"`
+	UserID    uuid.UUID   `json:"user_id" gorm:"not null"`
+	Role      ProjectRole `json:"role" gorm:"not null"`
+	JoinedAt  time.Time   `json:"joined_at" gorm:"default:CURRENT_TIMESTAMP"`
+
 	// Relaciones
 	Project *Project `json:"project,omitempty"`
 	User    *User    `json:"user,omitempty"`
@@ -59,22 +63,22 @@ type ProjectMember struct {
 type ProjectRole string
 
 const (
-	ProjectRoleOwner      ProjectRole = "owner"
-	ProjectRoleManager    ProjectRole = "manager"
-	ProjectRoleDeveloper  ProjectRole = "developer"
-	ProjectRoleTester     ProjectRole = "tester"
-	ProjectRoleViewer     ProjectRole = "viewer"
+	ProjectRoleOwner     ProjectRole = "owner"
+	ProjectRoleManager   ProjectRole = "manager"
+	ProjectRoleDeveloper ProjectRole = "developer"
+	ProjectRoleTester    ProjectRole = "tester"
+	ProjectRoleViewer    ProjectRole = "viewer"
 )
 
 type CreateProjectRequest struct {
-	Name        string            `json:"name" binding:"required,min=2,max=100"`
-	Key         string            `json:"key" binding:"required,min=2,max=10,uppercase"`
-	Description string            `json:"description"`
-	StartDate   *time.Time        `json:"start_date"`
-	EndDate     *time.Time        `json:"end_date"`
-	Budget      float64           `json:"budget"`
-	IsPublic    bool              `json:"is_public"`
-	Settings    ProjectSettings   `json:"settings"`
+	Name        string                `json:"name" binding:"required,min=2,max=100"`
+	Key         string                `json:"key" binding:"required,min=2,max=10,uppercase"`
+	Description string                `json:"description"`
+	StartDate   *time.Time            `json:"start_date"`
+	EndDate     *time.Time            `json:"end_date"`
+	Budget      float64               `json:"budget"`
+	IsPublic    bool                  `json:"is_public"`
+	Settings    ProjectSettings       `json:"settings"`
 	Members     []ProjectMemberInvite `json:"members"`
 }
 
@@ -104,10 +108,10 @@ type ProjectStats struct {
 }
 
 type ProjectDashboard struct {
-	Project     *Project      `json:"project"`
-	Stats       *ProjectStats `json:"stats"`
-	RecentTasks []Task        `json:"recent_tasks"`
-	ActiveSprint *Sprint      `json:"active_sprint,omitempty"`
+	Project      *Project      `json:"project"`
+	Stats        *ProjectStats `json:"stats"`
+	RecentTasks  []Task        `json:"recent_tasks"`
+	ActiveSprint *Sprint       `json:"active_sprint,omitempty"`
 }
 
 func (p *Project) IsActive() bool {
@@ -118,18 +122,18 @@ func (p *Project) CanUserAccess(userID uuid.UUID, userRole UserRole) bool {
 	if userRole == RoleAdmin {
 		return true
 	}
-	
+
 	if p.IsPublic {
 		return true
 	}
-	
+
 	// Verificar membresía en el proyecto
 	for _, member := range p.Members {
 		if member.UserID == userID {
 			return true
 		}
 	}
-	
+
 	return false
 }
 
